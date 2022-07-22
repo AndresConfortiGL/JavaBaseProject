@@ -19,5 +19,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         presenter = new ParkingPresenter(new ParkingModel(), new ParkingView(this, binding));
+        setListener();
+    }
+
+    public void setListener(){
+        binding.parkingButton.setOnClickListener(view -> presenter.showAvailableParkingSpots());
     }
 }
