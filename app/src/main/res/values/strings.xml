@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">JavaBaseProject</string>
-    <string name="activity_main_button_text">Button</string>
-    <string name="activity_main_title_text">Parking Text</string>
+    <string name="activity_main_button_text">PRESS ME</string>
+    <string name="activity_main_title_text">- AVAILABLE PARKING SPOTS -</string>
+    <string name="activity_main_available_text">AVAILABLE SPOTS: </string>
 </resources>
