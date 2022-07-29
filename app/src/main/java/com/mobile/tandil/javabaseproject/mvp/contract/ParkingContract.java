@@ -1,16 +1,20 @@
 package com.mobile.tandil.javabaseproject.mvp.contract;
 
+import com.mobile.tandil.javabaseproject.listener.ListenerDialogFragment;
+
 public interface ParkingContract {
     interface Model {
-        void setAvailableParkingSpots(int availableParkingSpots);
-        int getAvailableParkingSpots();
+        void setAvailableParkingSpots(Long availableParkingSpots);
+        long getAvailableParkingSpots();
     }
 
     interface Presenter {
-        void showAvailableParkingSpots();
+        void showFragment(ListenerDialogFragment listener);
+        void showAvailableParkingSpots(Long value);
     }
 
     interface View {
-        void displayAvailableParkingSpots(String availableParkingSpots);
+        void displayFragment(ListenerDialogFragment listener);
+        void displayAvailableParkingSpots(Long availableParkingSpots);
     }
 }

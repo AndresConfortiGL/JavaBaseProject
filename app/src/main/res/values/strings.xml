@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">JavaBaseProject</string>
     <string name="activity_main_button_text">PRESS ME</string>
-    <string name="activity_main_title_text">- AVAILABLE PARKING SPOTS -</string>
-    <string name="activity_main_available_text">AVAILABLE SPOTS: </string>
+    <string name="activity_main_title_text">AVAILABLE PARKING SPOTS</string>
+    <string name="activity_main_available_text">AVAILABLE SPOTS: \n%s</string>
+    <string name="fragment_dialog_set_available_text">SET AVAILABLE SPOTS</string>
+    <string name="fragment_dialog_accept_button_text">ACCEPT</string>
+    <string name="fragment_dialog_cancel_button_text">CANCEL</string>
+    <string name="toast_empty_message">THE INPUT IS EMPTY</string>
 </resources>
