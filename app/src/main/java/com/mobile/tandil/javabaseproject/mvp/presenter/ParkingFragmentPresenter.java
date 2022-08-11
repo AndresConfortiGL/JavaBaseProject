@@ -4,7 +4,6 @@ import com.mobile.tandil.javabaseproject.listener.ListenerDialogFragment;
 import com.mobile.tandil.javabaseproject.mvp.contract.ParkingFragmentContract;
 
 public class ParkingFragmentPresenter implements ParkingFragmentContract.Presenter {
-
     private final ParkingFragmentContract.View view;
 
     public ParkingFragmentPresenter(ParkingFragmentContract.View view) {

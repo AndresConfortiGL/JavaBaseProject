@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">JavaBaseProject</string>
-    <string name="activity_main_button_text">PRESS ME</string>
+    <string name="activity_main_set_button_text">SET SPOTS</string>
+    <string name="activity_main_reservation_button_text">MAKE RESERVATION</string>
     <string name="activity_main_title_text">AVAILABLE PARKING SPOTS</string>
-    <string name="activity_main_available_text">AVAILABLE SPOTS: \n%s</string>
     <string name="fragment_dialog_set_available_text">SET AVAILABLE SPOTS</string>
     <string name="fragment_dialog_accept_button_text">ACCEPT</string>
     <string name="fragment_dialog_cancel_button_text">CANCEL</string>
     <string name="toast_empty_message">THE INPUT IS EMPTY</string>
+    <string name="toast_no_space_message">NO AVAILABLE SPOTS</string>
+    <string name="toast_invalid_dates">INVALID CHECK-IN / CHECK-OUT</string>
+    <string name="toast_invalid_parking_spot">INVALID PARKING SPOT</string>
+    <string name="toast_already_reserved">SPOT IS ALREADY RESERVED AT THAT TIME</string>
+    <string name="toast_reservation_done">RESERVATION COMPLETED</string>
+    <string name="toast_empty_text_inputs">YOU FORGOT TO COMPLETE THE TEXT INPUTS!!!</string>
+    <string name="toast_null_dates">YOU FORGOT TO COMPLETE THE DATES</string>
+    <string name="toast_impossible_dates">CHECK OUT CAN NOT BE BEFORE THE CHECK IN!!!</string>
+    <string name="date_picker_title">PLEASE INPUT A DATE</string>
+    <string name="time_picker_title">PLEASE INPUT A TIME</string>
+    <string name="activity_reserver_time_text">INPUT YOUR CHECK IN AND OUT DATES</string>
+    <string name="activity_reserver_check_out_button">CHECK OUT</string>
+    <string name="activity_reserver_check_in_button">CHECK IN</string>
+    <string name="activity_reserver_parking_lot_text">INPUT A PARKING LOT NUMBER</string>
+    <string name="activity_reserver_security_code_text">INPUT A SECURITY CODE</string>
+    <string name="activity_reserver_parking_lot_hint">LOT NUMBER</string>
+    <string name="activity_reserver_security_code_hint">SECURITY CODE</string>
 </resources>
