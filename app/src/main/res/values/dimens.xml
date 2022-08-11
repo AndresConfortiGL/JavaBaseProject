@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_main_button_margin_top">25dp</dimen>
-    <dimen name="activity_main_text_margin">28dp</dimen>
-    <dimen name="activity_main_background_text_size">20sp</dimen>
+    <dimen name="activity_main_text_margin_bottom">10dp</dimen>
     <dimen name="activity_main_logo">100dp</dimen>
     <dimen name="activity_main_background_top_margin">150dp</dimen>
-    <dimen name="fragment_background_text_size">15sp</dimen>
-    <dimen name="fragment_margin_top">20dp</dimen>
-    <dimen name="fragment_margin_bottom">10dp</dimen>
+    <dimen name="activity_main_background_text_size">20sp</dimen>
+    <dimen name="activity_button_margin_top">20dp</dimen>
+    <dimen name="fragment_margin_bottom">12dp</dimen>
+    <dimen name="activity_reserver_parking_margin_top">40dp</dimen>
+    <dimen name="main_activity_default_text_view">70dp</dimen>
+    <dimen name="main_activity_button_padding">10dp</dimen>
+    <dimen name="picker_horizontal_padding">16dp</dimen>
 </resources>

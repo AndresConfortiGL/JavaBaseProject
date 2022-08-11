@@ -13,7 +13,6 @@ import com.mobile.tandil.javabaseproject.mvp.presenter.ParkingFragmentPresenter;
 import com.mobile.tandil.javabaseproject.mvp.view.ParkingFragmentView;
 
 public class ParkingFragment extends DialogFragment {
-
     public static final String PARKING_FRAGMENT_TAG = "PARKING_FRAGMENT_TAG";
     public static final String PARKING_LISTENER_KEY = "PARKING_LISTENER_KEY";
     private FragmentParkingBinding binding;
@@ -45,7 +44,8 @@ public class ParkingFragment extends DialogFragment {
 
     public void setListener() {
         binding.fragmentDialogAcceptButton.setOnClickListener(
-                view -> fragmentPresenter.onPressAcceptedButton(binding.fragmentDialogSetAvailableNumber.getText().toString(), listenerDialogFragment));
+                view -> fragmentPresenter.onPressAcceptedButton(
+                        binding.fragmentDialogSetAvailableNumber.getText().toString(), listenerDialogFragment));
         binding.fragmentDialogCancelButton.setOnClickListener(view -> fragmentPresenter.onPressCancelButton());
     }
 

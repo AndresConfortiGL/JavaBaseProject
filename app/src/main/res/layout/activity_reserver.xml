@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_reservation"
+    tools:context=".activity.ReserverActivity">
+
+    <TextView
+        style="@style/reserver_activity_date_text"
+        android:id="@+id/reserver_date_selection_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_reserver_time_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        style="@style/main_activity_button"
+        android:id="@+id/reserver_button_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:text="@string/activity_reserver_check_in_button"
+        app:layout_constraintEnd_toStartOf="@id/reserver_button_check_out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserver_date_selection_text_view" />
+
+    <Button
+        style="@style/main_activity_button"
+        android:id="@+id/reserver_button_check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:text="@string/activity_reserver_check_out_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/reserver_button_check_in"
+        app:layout_constraintTop_toBottomOf="@id/reserver_date_selection_text_view" />
+
+    <TextView
+        style="@style/reserver_activity_date_text"
+        android:text="@string/activity_reserver_parking_lot_text"
+        android:id="@+id/reserver_parking_lot_text_view"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserver_button_check_out" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reserver_parking_lot_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/activity_reserver_parking_lot_hint"
+        app:layout_constraintEnd_toEndOf="@id/reserver_parking_lot_text_view"
+        app:layout_constraintStart_toStartOf="@id/reserver_parking_lot_text_view"
+        app:layout_constraintTop_toBottomOf="@id/reserver_parking_lot_text_view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/reserver_activity_spot_text_input"
+            android:id="@+id/reserver_parking_lot_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/reserver_activity_date_text"
+        android:id="@+id/reserver_security_code_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:text="@string/activity_reserver_security_code_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserver_parking_lot_text_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reserver_security_code_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/activity_reserver_security_code_hint"
+        app:layout_constraintEnd_toEndOf="@id/reserver_security_code_text_view"
+        app:layout_constraintStart_toStartOf="@id/reserver_security_code_text_view"
+        app:layout_constraintTop_toBottomOf="@id/reserver_security_code_text_view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reserver_security_code_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            style="@style/reserver_activity_spot_text_input"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        style="@style/main_activity_button"
+        android:id="@+id/reserver_button_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:text="@string/fragment_dialog_accept_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/reserver_button_back"
+        app:layout_constraintTop_toBottomOf="@id/reserver_security_code_text_layout"/>
+
+    <Button
+        style="@style/main_activity_button"
+        android:id="@+id/reserver_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_reserver_parking_margin_top"
+        android:text="@string/fragment_dialog_cancel_button_text"
+        app:layout_constraintEnd_toStartOf="@id/reserver_button_continue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserver_security_code_text_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
