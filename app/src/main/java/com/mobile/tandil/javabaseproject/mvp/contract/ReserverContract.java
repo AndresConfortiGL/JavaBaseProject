@@ -14,7 +14,6 @@ public interface ReserverContract {
         void saveDateListener(Calendar date, ListenerPickerFragment listener);
         void saveTimeListener(Calendar time);
         void saveParkingData(String parkingLot, String securityCode);
-        void validateData(Reservation reservation);
     }
 
     interface View {
@@ -22,7 +21,6 @@ public interface ReserverContract {
         void displayDatePicker(ListenerPickerFragment listener);
         void displayTimePicker(ListenerPickerFragment listener);
         void displayInvalidDateToast();
-        void displayImpossibleDateToast();
         void displayInvalidParkingSpotToast();
         void displayAlreadyReservedToast();
         void displayReservationCompletedToast();

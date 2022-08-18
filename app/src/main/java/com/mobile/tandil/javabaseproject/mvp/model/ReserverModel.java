@@ -65,8 +65,6 @@ public class ReserverModel implements ReserverContract.Model {
     public ValidationEnums checkReservation(Reservation reservation) {
         if (reservation.getCheckOut() == null || reservation.getCheckIn() == null) {
             return ValidationEnums.NULL_DATES;
-        } else if (reservation.getCheckIn().before(Calendar.getInstance())) {
-            return ValidationEnums.IMPOSSIBLE_DATES;
         } else if (reservation.getCheckIn().after(reservation.getCheckOut()) || reservation.getCheckIn().compareTo(reservation.getCheckOut()) == 0) {
             return ValidationEnums.INVALID_DATES;
         } else if (reservation.getParkingNumber() > db.getParkingLots() || reservation.getParkingNumber() < Constants.MIN_LIMIT) {

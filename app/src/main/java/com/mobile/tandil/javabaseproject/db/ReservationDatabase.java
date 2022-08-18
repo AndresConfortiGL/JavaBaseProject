@@ -38,4 +38,8 @@ public class ReservationDatabase {
     public void setParkingLots(Long parkingLots) {
         this.parkingLots = parkingLots;
     }
+
+    public void clearDatabase() {
+        reservations.clear();
+    }
 }
