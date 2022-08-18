@@ -15,9 +15,7 @@ public class ParkingPresenter implements ParkingContract.Presenter {
 
     @Override
     public void showFragment(ListenerDialogFragment listener) {
-        if (listener != null) {
             parkingView.displayFragment(listener);
-        }
     }
 
     @Override

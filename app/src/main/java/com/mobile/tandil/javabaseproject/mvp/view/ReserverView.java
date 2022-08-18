@@ -80,9 +80,4 @@ public class ReserverView extends ActivityView implements ReserverContract.View 
     public void displayNullParkingSpotToast() {
         displayToast(R.string.toast_null_dates);
     }
-
-    @Override
-    public void displayImpossibleDateToast() {
-        displayToast(R.string.toast_impossible_dates);
-    }
 }

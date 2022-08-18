@@ -3,7 +3,6 @@ package com.mobile.tandil.javabaseproject.mvp.presenter;
 import com.mobile.tandil.javabaseproject.entity.Reservation;
 import com.mobile.tandil.javabaseproject.listener.ListenerPickerFragment;
 import com.mobile.tandil.javabaseproject.mvp.contract.ReserverContract;
-import com.mobile.tandil.javabaseproject.mvp.model.ReserverModel;
 import com.mobile.tandil.javabaseproject.util.ValidationEnums;
 import java.util.Calendar;
 
@@ -11,7 +10,7 @@ public class ReserverPresenter implements ReserverContract.Presenter {
     private final ReserverContract.View reserverView;
     private final ReserverContract.Model reserverModel;
 
-    public ReserverPresenter(ReserverContract.View reserverView, ReserverModel reserverModel) {
+    public ReserverPresenter(ReserverContract.View reserverView, ReserverContract.Model reserverModel) {
         this.reserverView = reserverView;
         this.reserverModel = reserverModel;
     }
@@ -35,13 +34,13 @@ public class ReserverPresenter implements ReserverContract.Presenter {
 
     @Override
     public void saveDateListener(Calendar date, ListenerPickerFragment listener) {
-            reserverModel.saveDateDataFragment(date);
-            reserverView.displayTimePicker(listener);
+        reserverModel.saveDateDataFragment(date);
+        reserverView.displayTimePicker(listener);
     }
 
     @Override
     public void saveTimeListener(Calendar time) {
-            reserverModel.saveTimeDataFragment(time);
+        reserverModel.saveTimeDataFragment(time);
     }
 
     @Override
@@ -54,15 +53,11 @@ public class ReserverPresenter implements ReserverContract.Presenter {
         }
     }
 
-    @Override
-    public void validateData(Reservation reservation) {
+    private void validateData(Reservation reservation) {
         ValidationEnums validation = reserverModel.checkReservation(reservation);
         switch (validation) {
             case NULL_DATES:
                 reserverView.displayNullParkingSpotToast();
-                break;
-            case IMPOSSIBLE_DATES:
-                reserverView.displayImpossibleDateToast();
                 break;
             case INVALID_DATES:
                 reserverView.displayInvalidDateToast();
